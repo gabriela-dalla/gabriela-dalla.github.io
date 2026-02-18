@@ -21,13 +21,15 @@
 <!-- CABEÇALHO -->
 <header class="bg-light py-3">
   <div class="container d-flex justify-content-between align-items-center">
-    <h1 class="h4 m-0">PetShop Arnt</h1>
+    <h1 class="h4 m-0">Portifólio Gabriela Dalla Favera</h1>
     <nav>
       <a class="me-3" href="#inicio">Início</a>
-      <a class="me-3" href="#produtos">Produtos</a>
-      <a class="me-3" href="#servicos">Serviços</a>
-      <a class="me-3" href="#cadastro">Cadastro</a>
-      <a href="#agendamento">Agendamento</a>
+      <a class="me-3" href="#produtos">Projetos</a>
+<!--      
+      <a class="me-3" href="#servicos"></a>
+      <a class="me-3" href="#cadastro"></a> 
+      <a href="#agendamento">Agendamento</a> 
+-->
     </nav>
   </div>
 </header>
@@ -87,22 +89,22 @@
     </thead>
     <tbody>
       <tr>
-        <td>Banho</td>
-        <td>Banho completo em cães e gatos</td>
-        <td>R$ 40,00</td>
-        <td>Sim</td>
+        <td>Projeto1</td>
+        <td>Projeto1</td>
+        <td>Projeto1w</td>
+        <td>Projeto1</td>
       </tr>
       <tr>
-        <td>Tosa</td>
-        <td>Tosa higiênica e completa</td>
-        <td>R$ 55,00</td>
-        <td>Sim</td>
+        <td>Projeto2</td>
+        <td>Projeto2</td>
+        <td>Projeto2w</td>
+        <td>Projeto2</td>
       </tr>
       <tr>
-        <td>Consulta Veterinária</td>
-        <td>Atendimento clínico especializado</td>
-        <td>R$ 80,00</td>
-        <td>Não</td>
+        <td>Projeto3</td>
+        <td>Projeto3</td>
+        <td>Projeto3w</td>
+        <td>Projeto3</td>
       </tr>
     </tbody>
   </table>
@@ -110,7 +112,7 @@
 
 <!-- CADASTRO CLIENTE + PET -->
 <section id="cadastro" class="container mb-5">
-  <h2 class="mb-4">Cadastro Cliente & Pet</h2>
+  <h2 class="mb-4">Cadastro Cliente</h2>
   <form id="formCadastro" class="row g-3">
     <!-- CLIENTE -->
     <div class="col-md-6">
@@ -142,7 +144,7 @@
       <input type="text" class="form-control" id="endereco" required>
     </div>
 
-    <!-- PET -->
+    <!-- PET 
     <div class="col-md-4">
       <label for="nomePet" class="form-label required">Nome do Pet</label>
       <input type="text" class="form-control" id="nomePet" required>
@@ -155,7 +157,7 @@
       <label for="idade" class="form-label required">Idade (anos)</label>
       <input type="number" class="form-control" id="idade" min="0" required>
     </div>
-
+-->
     <div class="col-12">
       <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
@@ -170,16 +172,16 @@
       <label for="servico" class="form-label required">Serviço</label>
       <select id="servico" class="form-select" required>
         <option value="">Selecione</option>
-        <option>Banho</option>
-        <option>Tosa</option>
+        <option>Interiores</option>
+        <option>Geral</option>
       </select>
     </div>
     <div class="col-md-4">
       <label for="metodo" class="form-label required">Método</label>
       <select id="metodo" class="form-select" required>
         <option value="">Selecione</option>
-        <option>Tele-busca</option>
-        <option>Entrega no local</option>
+        <option>Orçamento do Projeto</option>
+        <option>Visita ao local</option>
       </select>
     </div>
     <div class="col-md-4">
@@ -197,7 +199,7 @@
   <p class="mb-1">&copy; 2025 PetShop Arnt | Desenvolvido por Felipe Arnt</p>
   <nav>
     <a class="me-2" href="#inicio">Início</a>
-    <a class="me-2" href="#produtos">Produtos</a>
+    <a class="me-2" href="#produtos">Projetos</a>
     <a class="me-2" href="#servicos">Serviços</a>
     <a class="me-2" href="#cadastro">Cadastro</a>
     <a href="#agendamento">Agendamento</a>
@@ -212,7 +214,7 @@
   // Exibe mensagem simples ao cadastrar
   document.getElementById('formCadastro').addEventListener('submit', function (e) {
     e.preventDefault();
-    alert('Cliente e Pet cadastrados com sucesso!');
+    alert('Cliente cadastrado com sucesso!');
     this.reset();
   });
 
