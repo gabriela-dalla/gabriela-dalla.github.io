@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabriela Dalla Favero - Arquitetura de Interiores</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body { scroll-behavior: smooth; }
+    .carousel-item img { height: 300px; object-fit: cover; }
+    footer { background-color: #f8f9fa; padding: 20px 0; text-align: center; }
+    .required::after { content: " *"; color: red; }
+  </style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header class="bg-light py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="h4 m-0">PetShop Arnt</h1>
+    <nav>
+      <a class="me-3" href="#inicio">Início</a>
+      <a class="me-3" href="#produtos">Produtos</a>
+      <a class="me-3" href="#servicos">Serviços</a>
+      <a class="me-3" href="#cadastro">Cadastro</a>
+      <a href="#agendamento">Agendamento</a>
+    </nav>
+  </div>
+</header>
+
+<!-- CARROSSEL -->
+<section id="inicio" class="mb-5">
+  <div id="carouselPet" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="caminho/para/projeto1" class="d-block w-70" alt="Cão sendo banhado">
+      </div>
+      <div class="carousel-item">
+        <img src="caminho/para/projeto2/" class="d-block w-70" alt="Gato no consultório">
+      </div>
+      <div class="carousel-item">
+        <img src="caminho/para/projeto3" class="d-block w-100" alt="Brinquedos para pets">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPet" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselPet" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="projetos" class="container mb-5">
+  <h2 class="mb-4">Projetos</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="caminho/para/card-de-projetos" class="card-img-top" alt="Ração Premium para cães">
+        <div class="card-body">
+          <h5 class="card-title">Projeto 1</h5>
+          <p class="card-text">Projeto 1 </p>
+          <p class="fw-bold">Teste</p>
+        </div>
+      </div>
+    </div>
+    <!-- Adicionar mais projetos aqui -->
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="container mb-5">
+  <h2 class="mb-4">Serviços</h2>
+  <table class="table table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Serviço</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Tele-busca</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Banho</td>
+        <td>Banho completo em cães e gatos</td>
+        <td>R$ 40,00</td>
+        <td>Sim</td>
+      </tr>
+      <tr>
+        <td>Tosa</td>
+        <td>Tosa higiênica e completa</td>
+        <td>R$ 55,00</td>
+        <td>Sim</td>
+      </tr>
+      <tr>
+        <td>Consulta Veterinária</td>
+        <td>Atendimento clínico especializado</td>
+        <td>R$ 80,00</td>
+        <td>Não</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- CADASTRO CLIENTE + PET -->
+<section id="cadastro" class="container mb-5">
+  <h2 class="mb-4">Cadastro Cliente & Pet</h2>
+  <form id="formCadastro" class="row g-3">
+    <!-- CLIENTE -->
+    <div class="col-md-6">
+      <label for="nomeCliente" class="form-label required">Nome Completo</label>
+      <input type="text" class="form-control" id="nomeCliente" required>
+    </div>
+    <div class="col-md-3">
+      <label for="cpf" class="form-label required">CPF</label>
+      <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+    </div>
+    <div class="col-md-3">
+      <label for="sexo" class="form-label required">Sexo</label>
+      <select id="sexo" class="form-select" required>
+        <option value="">Selecione</option>
+        <option>Feminino</option>
+        <option>Masculino</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label required">E-mail</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="col-md-3">
+      <label for="telefone" class="form-label required">Telefone</label>
+      <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+    <div class="col-md-3">
+      <label for="endereco" class="form-label required">Endereço</label>
+      <input type="text" class="form-control" id="endereco" required>
+    </div>
+
+    <!-- PET -->
+    <div class="col-md-4">
+      <label for="nomePet" class="form-label required">Nome do Pet</label>
+      <input type="text" class="form-control" id="nomePet" required>
+    </div>
+    <div class="col-md-4">
+      <label for="raca" class="form-label required">Raça</label>
+      <input type="text" class="form-control" id="raca" required>
+    </div>
+    <div class="col-md-4">
+      <label for="idade" class="form-label required">Idade (anos)</label>
+      <input type="number" class="form-control" id="idade" min="0" required>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+  </form>
+</section>
+
+<!-- AGENDAMENTO -->
+<section id="agendamento" class="container mb-5">
+  <h2 class="mb-4">Agendamento de Serviço</h2>
+  <form id="formAgendamento" class="row g-3">
+    <div class="col-md-4">
+      <label for="servico" class="form-label required">Serviço</label>
+      <select id="servico" class="form-select" required>
+        <option value="">Selecione</option>
+        <option>Banho</option>
+        <option>Tosa</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="metodo" class="form-label required">Método</label>
+      <select id="metodo" class="form-select" required>
+        <option value="">Selecione</option>
+        <option>Tele-busca</option>
+        <option>Entrega no local</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label for="dataHora" class="form-label required">Data & Hora</label>
+      <input type="datetime-local" class="form-control" id="dataHora" required>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">Agendar</button>
+    </div>
+  </form>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <p class="mb-1">&copy; 2025 PetShop Arnt | Desenvolvido por Felipe Arnt</p>
+  <nav>
+    <a class="me-2" href="#inicio">Início</a>
+    <a class="me-2" href="#produtos">Produtos</a>
+    <a class="me-2" href="#servicos">Serviços</a>
+    <a class="me-2" href="#cadastro">Cadastro</a>
+    <a href="#agendamento">Agendamento</a>
+  </nav>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript Custom -->
+<script>
+  // Exibe mensagem simples ao cadastrar
+  document.getElementById('formCadastro').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Cliente e Pet cadastrados com sucesso!');
+    this.reset();
+  });
+
+  // Exibe mensagem simples ao agendar
+  document.getElementById('formAgendamento').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Agendamento realizado com sucesso!');
+    this.reset();
+  });
+
+  // Função temporal simples: Saudação com base na hora
+  const hora = new Date().getHours();
+  let saudacao = '';
+  if (hora < 12) saudacao = 'Bom dia!';
+  else if (hora < 18) saudacao = 'Boa tarde!';
+  else saudacao = 'Boa noite!';
+  console.log(saudacao);
+</script>
+
+</body>
+</html>
